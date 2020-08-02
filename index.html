@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <title>Local Weather</title>
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron">
+            <h1 class="text-center">Weather Dashboard</h1>
+        </div>
+    </header>
+
+    <div class="container clearfix">
+
+        <aside class="citySearch float-md-left">
+            <form id="searchForm" class="form-inline">
+                <label for="searchField">
+                    <h5>Search for a City:</h5>
+                </label>
+                <input type="search" class="form-control" id="searchField">
+                <button class="btn btn-primary" type="submit" id="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+            <ul id="cityList" class="list-group">
+            </ul>
+        </aside>
+
+        <main id="main-group">
+            <div id="cityWeather">
+                <h2 id="currentCity"></h2>
+                <img src="" id="currentWeatherIcon">
+                <p>Temperature: <span id="cityTempF"></span></p>
+                <p>Humidity: <span id="cityHumidity"></span> </p>
+                <p>Wind Speed: <span id="cityWindSpeed"></span></p>
+                <p>UV Index: <span id="cityUvIndex"></span></p>
+            </div>
+
+            <div id="fiveDayForecast">
+                <h2>5-Day Forecast:</h2>
+                <div class="forecastCard float-left">
+                    <h6 id="forecastDate4"></h6>
+                    <img src="" id="forecastIcon4">
+                    <p>Temp: <span id="forecastTempF4"></span></p>
+                    <p>Humidity: <span id="forecastHumidity4"></span></p>
+                </div>
+                <div class="forecastCard float-left">
+                    <h6 id="forecastDate12"></h6>
+                    <img src="" id="forecastIcon12">
+                    <p>Temp: <span id="forecastTempF12"></span></p>
+                    <p>Humidity: <span id="forecastHumidity12"></span></p>
+                </div>
+                <div class="forecastCard float-left">
+                    <h6 id="forecastDate20"></h6>
+                    <img src="" id="forecastIcon20">
+                    <p>Temp: <span id="forecastTempF20"></span></p>
+                    <p>Humidity: <span id="forecastHumidity20"></span></p>
+                </div>
+                <div class="forecastCard float-left">
+                    <h6 id="forecastDate28"></h6>
+                    <img src="" id="forecastIcon28">
+                    <p>Temp: <span id="forecastTempF28"></span></p>
+                    <p>Humidity: <span id="forecastHumidity28"></span></p>
+                </div>
+                <div class="forecastCard float-left">
+                    <h6 id="forecastDate36"></h6>
+                    <img src="" id="forecastIcon36">
+                    <p>Temp: <span id="forecastTempF36"></span></p>
+                    <p>Humidity: <span id="forecastHumidity36"></span></p>
+                </div>
+
+
+            </div>
+        </main>
+
+
+
+    </div>
+
+    <footer class="footer">
+        <p class="small">"The forecast will probably change!"</p>
+    </footer>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="script.js"></script>
+
+</html>
